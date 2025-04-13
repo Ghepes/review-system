@@ -1,6 +1,6 @@
 "use client"
 
-import type React from "react"
+import React from "react"
 
 import { useState, useEffect } from "react"
 import { saveReview, getReviews, getReviewStats, type Review } from "@/app/actions/review-actions"
@@ -76,23 +76,15 @@ export default function ReviewWidget({ productId, website }: ReviewWidgetProps) 
   }
 
   const getStarIcons = (rating: number) => {
-    const stars = []
-    for (let i = 1; i <= 5; i++) {
-      if (i <= rating) {
-        stars.push(
-          <span key={i} className="star-display">
+    return (
+      <div className="flex">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <span key={star} className={star <= rating ? "star-display" : "star-empty"}>
             ★
-          </span>,
-        )
-      } else {
-        stars.push(
-          <span key={i} className="star-empty">
-            ★
-          </span>,
-        )
-      }
-    }
-    return stars
+          </span>
+        ))}
+      </div>
+    )
   }
 
   const formatDate = (dateString: string) => {
@@ -153,7 +145,7 @@ export default function ReviewWidget({ productId, website }: ReviewWidgetProps) 
               <label className="block text-sm font-medium text-gray-700 mb-1">Rating</label>
               <div className="star-rating">
                 {[5, 4, 3, 2, 1].map((value) => (
-                  <div key={value} className="inline-block">
+                  <React.Fragment key={value}>
                     <input
                       type="radio"
                       id={`star${value}`}
@@ -164,15 +156,10 @@ export default function ReviewWidget({ productId, website }: ReviewWidgetProps) 
                       className="hidden"
                       required
                     />
-                    <label
-                      htmlFor={`star${value}`}
-                      title={`${value} stars`}
-                      className="cursor-pointer text-2xl px-1"
-                      onClick={() => setRating(value)}
-                    >
+                    <label htmlFor={`star${value}`} title={`${value} stars`} className="cursor-pointer text-2xl px-1">
                       ★
                     </label>
-                  </div>
+                  </React.Fragment>
                 ))}
               </div>
             </div>

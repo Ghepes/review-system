@@ -25,6 +25,7 @@ body {
   font-size: 1.5rem;
   padding: 0 0.1rem;
   color: #ddd;
+  transition: color 0.2s ease-in-out;
 }
 
 .star-rating label:hover,
@@ -35,10 +36,12 @@ body {
 
 .star-display {
   color: #ffc107;
+  font-size: 1.25rem;
 }
 
 .star-empty {
   color: #ddd;
+  font-size: 1.25rem;
 }
 
 @keyframes fadeIn {
