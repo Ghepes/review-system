@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Review System",
   description: "A review system for products",
-    generator: 'v0.dev'
+    generator: 'wromo'
 }
 
 export default function RootLayout({
