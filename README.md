@@ -1,5 +1,6 @@
 # review-system
- review system form marketplace to return to marketplace app system to API back
+ Review system to Website :  return review to Website page back
+ Storage: Local storage + MongoDB Storage
 
  install:
  ```
@@ -21,13 +22,17 @@
 
 
 Set .ENV mongoDB:
+
 MONGODB_URI=mongodb+srv://xxxxxxxx:xxxxxxxxx@xxxxxxxxxx.q00000x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster
+
 MONGODB_DB=exemple-reviews-db
+
 COLLECTION_NAME=reviews
 
 
 
 Demo Pages
+
 Example Product 1 Reviews
 Example Product 2 Reviews
 API Endpoints
