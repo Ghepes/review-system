@@ -32,7 +32,7 @@ This project was transformed from an index.html page serverless Review in vercel
 
 Set .ENV mongoDB:
 
-MONGODB_URI=mongodb+srv://exemple:admin@exemplexyz.q1234567x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster
+MONGODB_URI=mongodb+srv://example:admin@example.xyz.q1234567x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster
 
 MONGODB_DB=exemple-reviews-db
 
