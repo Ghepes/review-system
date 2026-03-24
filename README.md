@@ -3,6 +3,12 @@
  
  Storage: Local storage + MongoDB Storage
 
+
+ It can be used serverless by using only html js css page that stores data in local Web storage and can be requested through serverless domain trun via Fach requests and pushed into json bucket.
+The above implementation was tested by the test: Fech json to mongodb
+
+
+
  install:
  ```
  pnpm install
